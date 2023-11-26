@@ -7,9 +7,12 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 
+import javax.imageio.IIOException;
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Hashtable;
 
@@ -40,8 +43,14 @@ public class QRGenerator {
             ImageIO.write(bufferedImage, "png", qrCodeFile);
 
 
-        } catch (WriterException | IOException e) {
-            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            JOptionPane.showMessageDialog(null, "ERRO "+e.getMessage());
+        } catch (IIOException e) {
+            JOptionPane.showMessageDialog(null, "ERRO "+e.getMessage());
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(null, "ERRO "+e.getMessage());
+        } catch (WriterException e) {
+            JOptionPane.showMessageDialog(null, "ERRO "+e.getMessage());
         }
 
 

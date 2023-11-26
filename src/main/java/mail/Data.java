@@ -9,7 +9,7 @@ public class Data {
     public String door = "587";
     public String user = "contatodiegochruscinski@gmail.com";
 
-    public String password = ":)";
+    public String password = "yxyukdopapmuqilv";
     public Boolean auth = true;
 
     // Estrutura do e-mail

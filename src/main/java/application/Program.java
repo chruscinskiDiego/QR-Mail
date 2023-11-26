@@ -5,7 +5,9 @@ import mail.Data;
 import mail.Shipping;
 import qrcode.QRGenerator;
 
+import javax.imageio.IIOException;
 import javax.swing.*;
+import java.io.FileNotFoundException;
 
 public class Program {
 
