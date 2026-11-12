@@ -1,31 +1,31 @@
 # QR Mail
 
-Projeto em Java para gerar QR Codes a partir de links e enviá-los por e-mail.
+Java project for generating QR codes from links and sending them by email.
 
-## Funcionalidades
+## Features
 
-- Entrada de link e dados do destinatário.
-- Geração de imagem com ZXing.
-- Envio por SMTP com JavaMail.
-- Testes relacionados à geração e ao envio.
+- Accepts a link and recipient details.
+- Generates an image with ZXing.
+- Sends email through SMTP with JavaMail.
+- Includes tests related to QR generation and email delivery.
 
-## Tecnologias
+## Technologies
 
-Java 18, ZXing, JavaMail, Java Activation e JUnit.
+Java 18, ZXing, JavaMail, Java Activation and JUnit.
 
-## Preparar o ambiente
+## Prepare the environment
 
-O pom.xml não declara todas as dependências de execução. O repositório inclui JARs de JavaMail, Activation e ZXing; adicione essas bibliotecas ao classpath pela IDE antes de executar application.Program.
+pom.xml does not declare all runtime dependencies. The repository includes JavaMail, Activation and ZXing JARs; add these libraries to the IDE classpath before running application.Program.
 
-Revise os parâmetros em src/main/java/mail/Data.java e src/main/java/mail/Shipping.java. Use uma conta própria de desenvolvimento e os parâmetros exigidos pelo seu provedor SMTP. Não inclua senhas reais em commits.
+Review src/main/java/mail/Data.java and src/main/java/mail/Shipping.java. Use a dedicated development account and the SMTP settings required by your provider. Keep real passwords out of commits.
 
-## Organização
+## Structure
 
-- `qrcode/`: geração da imagem.
-- `mail/`: configuração e envio.
-- `exception/`: validação de e-mail.
-- `src/test/java/`: cenários de teste.
+- `qrcode/`: image generation.
+- `mail/`: configuration and delivery.
+- `exception/`: email validation.
+- `src/test/java/`: test scenarios.
 
-## Escopo
+## Scope
 
-Projeto de estudo. O envio depende da configuração e das políticas do provedor de e-mail; não há garantia de entrega ou suíte de integração isolada apenas por existir um teste de envio.
+A learning project. Delivery depends on provider configuration and policies. A delivery test alone does not guarantee successful email delivery or establish an isolated integration test suite.
